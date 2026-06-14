@@ -29,8 +29,8 @@ My domain is continuing student housing navigation for students at UC Irvine. Of
 | 6 |r/Any ideas on Tackling off campus housing?|Reddit thread; ways to find off-campus housing|https://www.reddit.com/r/UCI/comments/1lygzfl/any_ideas_on_tackling_off_campus_housing/|
 | 7 |r/What apartment communities don't suck?|Reddit thread; general ACC and off-campus housing advice|https://www.reddit.com/r/UCI/comments/1byxvg/what_apartment_communities_dont_suck/|
 | 8 |r/Why choose ACC apartments over residence halls?|Reddit thread; ACC vs on-campus housing|https://www.reddit.com/r/UCI/comments/rtaopg/why_choose_acc_apartments_over_residence_halls/|
-| 9 |UCI Housing Tour (Non-Dorms) - Pros and Cons Breakdown|YouTube video; overall ACC housing walkthrough|/Users/harinis/codepath/ai201/ai201-unofficial-guide/uci_housing.txt|
-| 10 |UC Irvine Student Housing Continuing Student Process Application Webinar 2026-2027|YouTube video; official continuing student housing guide|/Users/harinis/codepath/ai201/ai201-unofficial-guide/uci_official_housing.txt|
+| 9 |UCI Housing Tour (Non-Dorms) - Pros and Cons Breakdown|YouTube video; overall ACC housing walkthrough|/Users/harinis/codepath/ai201/ai201-unofficial-guide/documents/uci_housing.txt|
+| 10 |UC Irvine Student Housing Continuing Student Process Application Webinar 2026-2027|YouTube video; official continuing student housing guide|/Users/harinis/codepath/ai201/ai201-unofficial-guide/documents/uci_official_housing.txt|
 ---
 
 ## Chunking Strategy
@@ -41,10 +41,10 @@ My domain is continuing student housing navigation for students at UC Irvine. Of
      A review-heavy corpus warrants different chunking than a long FAQ. -->
 
 **Chunk size:**
-For reddit threads and megathreads, I will use 500-character chunks. For YouTube transcripts and official guides, I will first clean the data by removing timestamps and then use 800-character chunks.
+Reddit sources should be chunked by blank lines, but if a paragraph is longer than 500 characters, it will be split at 500 characters. There will be a 150-character overlap. The webinar transcript/ official housing information should use 500-character chunks with 150-character overlap. The Youtube tour will have 800 character chunking with 150 characters of overlap.
 
 **Overlap:**
-I will use 100 characters of overlap for all sources.
+I will use 150 characters of overlap for all sources.
 
 **Reasoning:**
 In reddit threads, people write in small paragraphs of about 500 characters each, and each person has different points of view so I want to separate text from different people. In YouTube videos and official guides, information is more in depth and is not from multiple points of view, so 800 characters is needed to keep all the information without unnecessarily splitting it. 100 characters of overlap is to account for cutting a chunk mid sentence.
@@ -117,7 +117,7 @@ If I were deploying this for real users, I would compare different embedding mod
 
 1. Document ingestion and cleaning
 
-I will give Claude my Documents section, my Chunking Strategy section, and examples of my raw source text, especially Reddit posts and YouTube/webinar transcripts. I will ask it to help implement functions that load text files, clean transcript timestamps, remove extra whitespace, and preserve source metadata.
+I will give Claude my Documents section, my Chunking Strategy section, and examples of my raw source text, especially Reddit posts and YouTube/webinar transcripts. I will ask it to help implement functions that load text files, clean transcript timestamps, clean reddit commands such as "share" (non-information), remove extra whitespace, and preserve source metadata.
 
 Expected output: Python helper functions such as load_documents(), clean_reddit_text(), clean_transcript_text(), and clean_official_page_text().
 
@@ -125,7 +125,7 @@ How I will verify it: I will print the cleaned version of several documents and 
 
 2. Chunking
 
-I will give the Claude my Chunking Strategy section and ask it to implement chunking based on source type. Reddit sources should use 500-character chunks with 100-character overlap. YouTube transcripts, webinar transcripts, and official housing pages should use 800-character chunks with 100-character overlap.
+I will give the Claude my Chunking Strategy section and ask it to implement chunking based on source type. Reddit sources should be chunked by blank line, but if a paragraph is longer than 500 characters, it will be split at 500 characters. There will be a 150-character overlap. The webinar transcript/ official housing information should use 500-character chunks with 150-character overlap. The Youtube tour will have 800 character chunking with 150 characters of overlap.
 
 Expected output: A chunk_text() function that return chunks with metadata such as source name, source type, and chunk index.
 

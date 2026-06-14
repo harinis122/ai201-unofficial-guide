@@ -25,8 +25,8 @@
 | 6 |r/Any ideas on Tackling off campus housing?|Reddit thread|https://www.reddit.com/r/UCI/comments/1lygzfl/any_ideas_on_tackling_off_campus_housing/|
 | 7 |r/What apartment communities don't suck?|Reddit thread|https://www.reddit.com/r/UCI/comments/1byxvg/what_apartment_communities_dont_suck/|
 | 8 |r/Why choose ACC apartments over residence halls?|Reddit thread|https://www.reddit.com/r/UCI/comments/rtaopg/why_choose_acc_apartments_over_residence_halls/|
-| 9 |UCI Housing Tour (Non-Dorms) | Pros and Cons Breakdown|YouTube|/Users/harinis/codepath/ai201/ai201-unofficial-guide/uci_housing.txt|
-| 10 |UC Irvine Student Housing Continuing Student Process Application Webinar 2026-2027|YouTube|/Users/harinis/codepath/ai201/ai201-unofficial-guide/uci_official_housing.txt|
+| 9 |UCI Housing Tour (Non-Dorms) | Pros and Cons Breakdown|YouTube|/Users/harinis/codepath/ai201/ai201-unofficial-guide/documents/uci_housing.txt|
+| 10 |UC Irvine Student Housing Continuing Student Process Application Webinar 2026-2027|YouTube|/Users/harinis/codepath/ai201/ai201-unofficial-guide/documents/uci_official_housing.txt|
 
 ---
 
