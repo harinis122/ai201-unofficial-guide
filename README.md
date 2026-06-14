@@ -8,8 +8,8 @@
 ---
 
 ## Domain
-     This system is an off-campus housing survival guide for students at UC Irvine.
-     This is valuable because there UCI has many off-campus housing options such as ACC and UTC. Students can make a more informed decision on where to live from other students' expereinces (especially with noise level, mold, etc) more than just reading official documentation about each option. There are generally things that students say about off campus housing that's important and not mentioned in official sources.
+     This system is a housing survival guide for continuing students at UC Irvine.
+     This is valuable because there UCI has many continuing student housing options such as ACC, Arroyo Vista, residence halls, and even UTC off-campus. Students can make a more informed decision on where to live from other students' expereinces (especially with noise level, mold, etc) more than just reading official documentation about each option. There are generally things that students say about off campus housing that's important and not mentioned in official sources.
 
 ---
 
@@ -24,9 +24,9 @@
 | 5 |r/I’ve heard bad things about ACC so far… Is off campus a better bet?|Reddit thread|https://www.reddit.com/r/UCI/comments/xq3q8e/ive_heard_bad_things_about_acc_so_far_is_off/|
 | 6 |r/Any ideas on Tackling off campus housing?|Reddit thread|https://www.reddit.com/r/UCI/comments/1lygzfl/any_ideas_on_tackling_off_campus_housing/|
 | 7 |r/What apartment communities don't suck?|Reddit thread|https://www.reddit.com/r/UCI/comments/1byxvg/what_apartment_communities_dont_suck/|
-| 8 |r/Living on or off campus?|Reddit thread|https://www.reddit.com/r/UCI/comments/jme20l/living_on_or_off_campus/|
+| 8 |r/Why choose ACC apartments over residence halls?|Reddit thread|https://www.reddit.com/r/UCI/comments/rtaopg/why_choose_acc_apartments_over_residence_halls/|
 | 9 |UCI Housing Tour (Non-Dorms) | Pros and Cons Breakdown|YouTube|/Users/harinis/codepath/ai201/ai201-unofficial-guide/uci_housing.txt|
-| 10 |UC Irvine - Undergraduate Continuing Student - Housing Options|YouTube|/Users/harinis/codepath/ai201/ai201-unofficial-guide/uci_official_housing.txt|
+| 10 |UC Irvine Student Housing Continuing Student Process Application Webinar 2026-2027|YouTube|/Users/harinis/codepath/ai201/ai201-unofficial-guide/uci_official_housing.txt|
 
 ---
 
