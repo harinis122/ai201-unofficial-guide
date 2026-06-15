@@ -4,20 +4,7 @@ Run with: python3 app.py
 """
 
 import gradio as gr
-from generate import ask
-
-SOURCE_LABELS = {
-    "uci_housing_megathread_2022_2023":      "r/UCI Housing Megathread (2022–2023)",
-    "uci_housing_megathread_2023_2024":      "r/UCI Housing Megathread (2023–2024)",
-    "are_the_acc_apartments_really_that_bad":"r/Are the ACC apartments really that bad?",
-    "acc_vs_offcampus_housing_advice":       "r/ACC vs off-campus housing advice",
-    "heard_bad_things_about_acc":            "r/I've heard bad things about ACC — is off campus better?",
-    "any_ideas_on_tackling_off_campus_housing": "r/Any ideas on tackling off-campus housing?",
-    "what_apartment_communities_dont_suck":  "r/What apartment communities don't suck?",
-    "why_choose_acc_over_residence_halls":   "r/Why choose ACC apartments over residence halls?",
-    "uci_housing":                           "YouTube: UCI Housing Tour (Non-Dorms) — Pros & Cons",
-    "uci_official_housing":                  "YouTube: UCI Official Continuing Student Housing Webinar",
-}
+from generate import ask, SOURCE_LABELS
 
 EXAMPLES = [
     "What do students say about the wifi at ACC apartments?",
@@ -38,10 +25,10 @@ def handle_query(question: str):
     return result["answer"], sources or "No sources retrieved."
 
 
-with gr.Blocks(title="UCI Housing Guide") as demo:
+with gr.Blocks(title="UCI Continuing Student Housing Unofficial Guide") as demo:
     gr.Markdown(
         """
-        # 🏠 UCI Housing Unofficial Guide
+        # 🏠 UCI Continuing Student Housing Unofficial Guide
         Ask anything about UCI continuing student housing — ACC communities, off-campus options,
         costs, noise, parking, and more. Answers are grounded entirely in student Reddit discussions
         and official UCI housing documentation. No hallucination — if the documents don't cover it,

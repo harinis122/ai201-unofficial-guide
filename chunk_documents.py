@@ -191,7 +191,7 @@ def process_file(path):
 # Driver
 # ---------------------------------------------------------------------------
 
-def main():
+def run():
     CHUNKS_DIR.mkdir(exist_ok=True)
     cleaned_files = sorted(CLEAN_DIR.glob("*.txt"))
     if not cleaned_files:
@@ -217,4 +217,4 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    run()

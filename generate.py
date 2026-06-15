@@ -21,6 +21,21 @@ load_dotenv()
 
 client = Groq(api_key=os.getenv("GROQ_API_KEY"))
 
+# Human-readable labels for each source document.
+# Imported by main.py (CLI) and app.py (Gradio UI) for display.
+SOURCE_LABELS = {
+    "uci_housing_megathread_2022_2023":         "r/UCI Housing Megathread (2022–2023)",
+    "uci_housing_megathread_2023_2024":         "r/UCI Housing Megathread (2023–2024)",
+    "are_the_acc_apartments_really_that_bad":   "r/Are the ACC apartments really that bad?",
+    "acc_vs_offcampus_housing_advice":          "r/ACC vs off-campus housing advice",
+    "heard_bad_things_about_acc":               "r/I've heard bad things about ACC — is off campus better?",
+    "any_ideas_on_tackling_off_campus_housing": "r/Any ideas on tackling off-campus housing?",
+    "what_apartment_communities_dont_suck":     "r/What apartment communities don't suck?",
+    "why_choose_acc_over_residence_halls":      "r/Why choose ACC apartments over residence halls?",
+    "uci_housing":                              "YouTube: UCI Housing Tour (Non-Dorms) — Pros & Cons",
+    "uci_official_housing":                     "YouTube: UCI Official Continuing Student Housing Webinar",
+}
+
 SYSTEM_PROMPT = """You are a helpful assistant that answers questions about UCI continuing student housing options.
 
 You may ONLY use information that is explicitly stated in the context chunks provided. Each chunk is labeled with its source.

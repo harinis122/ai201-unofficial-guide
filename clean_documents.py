@@ -243,7 +243,7 @@ def clean_file(path):
     return raw, cleaned.strip() + "\n"
 
 
-def main():
+def run():
     CLEAN_DIR.mkdir(exist_ok=True)
     raw_files = sorted(p for p in RAW_DIR.glob("*.txt"))
     if not raw_files:
@@ -262,4 +262,4 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    run()
