@@ -81,7 +81,7 @@ If I were deploying this for real users, I would compare different embedding mod
 |---|----------|-----------------|
 | 1 |Which ACC community is considered the nicest?|Plaza Verde (PV) is the newest community and is generally considered the nicest.|
 | 2 |What should I consider before dorming a second year?|Dorming is generally more expensive than ACC or off-campus housing and mostly just first years live in the dorms, but it can be more convenient for late night on-campus events.|
-| 3 |What do students say about Arroyo Vista?|Arroyo Vista has themed housing and is generally considered the worst housing option but it is cheap.|
+| 3 |What do students say about Arroyo Vista?|There are mixed opinions. Arroyo Vista doesn't have a 12 month contract, there are no freshmen, and it is cheap, but is generally considered the worst housing option because of its noise issues and ant problems.
 | 4 |What ACC community is the farthest from campus?|VDC is the farthest from campus.|
 | 5 |Is Irvine Company a good option?|Some students have had a good experiences with it but others say that it is expensive and has bad reviews on Yelp.|
 
