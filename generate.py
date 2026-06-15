@@ -93,7 +93,7 @@ Question: {question}"""
             seen.add(c["source"])
             sources.append(c["source"])
 
-    return {"answer": answer, "sources": sources}
+    return {"answer": answer, "sources": sources, "chunks": chunks}
 
 
 if __name__ == "__main__":

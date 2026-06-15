@@ -35,11 +35,6 @@ My domain is continuing student housing navigation for students at UC Irvine. Of
 
 ## Chunking Strategy
 
-<!-- How will you split documents into chunks?
-     State your chunk size (in tokens or characters), overlap size, and explain why those
-     numbers fit the structure of your documents.
-     A review-heavy corpus warrants different chunking than a long FAQ. -->
-
 **Chunk size:**
 Reddit sources should be chunked by blank lines, but if a paragraph is longer than 500 characters, it will be split at 500 characters. There will be a 150-character overlap. The webinar transcript/ official housing information should use 500-character chunks with 150-character overlap. The Youtube tour will have 800 character chunking with 150 characters of overlap.
 
@@ -72,30 +67,21 @@ If I were deploying this for real users, I would compare different embedding mod
 
 ## Evaluation Plan
 
-<!-- List your 5 test questions with their expected correct answers.
-     Questions should be specific enough that you can judge whether the system's response
-     is right or wrong. "What are good dining halls?" is too vague.
-     "What do students say about wait times at [dining hall name] during lunch?" is testable. -->
-
 | # | Question | Expected answer |
 |---|----------|-----------------|
-| 1 |Which ACC community is considered the nicest?|Plaza Verde (PV) is the newest community and is generally considered the nicest.|
-| 2 |What should I consider before dorming a second year?|Dorming is generally more expensive than ACC or off-campus housing and mostly just first years live in the dorms, but it can be more convenient for late night on-campus events.|
-| 3 |What do students say about Arroyo Vista?|There are mixed opinions. Arroyo Vista doesn't have a 12 month contract, there are no freshmen, and it is cheap, but is generally considered the worst housing option because of its noise issues and ant problems.
-| 4 |What ACC community is the farthest from campus?|VDC is the farthest from campus.|
-| 5 |Is Irvine Company a good option?|Some students have had a good experiences with it but others say that it is expensive and has bad reviews on Yelp.|
+| 1 |What do students say are the main advantages of living in the UCI ACC apartments?|Students say that ACC is convenient because it is close to campus, provides furniture, and designed for UCI students.|
+| 2 |What tradeoffs do students mention when comparing ACC housing with off-campus apartment housing such as UTC?|ACC is usually described as convenient and student-focused while UTC and other off-campus housing is usually a bit cheaper with a group but harder to coordinate.|
+| 3 |What should students consider besides rent when choosing UCI continuing housing options?|Students should consider distance to campus, parking, roommates, lease terms, maintenance quality, noise, safety, and transportation, and community.|
+| 4 |What are some ways students can find off-campus housing besides ACC?|The Anteater Housing Network and Irvine Company are good place to look.|
+| 5 |What are advantages of the Puerto Del Sol ACC community?|Puerto Del Sol is generally the cheapest ACC housing option and is also the closest to campus.|
 
 ---
 
 ## Anticipated Challenges
 
-<!-- What could go wrong? Name at least two specific risks with reasoning.
-     Consider: noisy or inconsistent documents, missing source attribution, off-topic
-     retrieval, chunks that split key information across boundaries. -->
-
 1. Sometimes the meaning of a particular paragraph in a reddit thread changes based on having read the previous responses or not. Some responses might be misinterpretted or not make sense due to chunking, causing the AI to output inaccurate information.
 
-2. Since most unoffical information on housing is opinionated, there will be conflicting and inconsistant information. This will cause unpredictable and inconsistant AI responses.
+2. Since most unoffical information on housing is opinionated, there will be conflicting and inconsistant information. This may cause unpredictable and inconsistant AI responses.
 
 ---
 
@@ -104,16 +90,6 @@ If I were deploying this for real users, I would compare different embedding mod
 ---
 
 ## AI Tool Plan
-
-<!-- For each part of the pipeline below, describe:
-     - Which AI tool you plan to use (Claude, Copilot, ChatGPT, etc.)
-     - What you'll give it as input (which sections of this planning.md, which requirements)
-     - What you expect it to produce
-     - How you'll verify the output matches your spec
-
-     "I'll use AI to help me code" is not a plan.
-     "I'll give Claude my Chunking Strategy section and ask it to implement chunk_text()
-     with my specified chunk size and overlap" is a plan. -->
 
 1. Document ingestion and cleaning
 

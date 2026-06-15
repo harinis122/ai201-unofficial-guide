@@ -17,12 +17,19 @@ EXAMPLES = [
 
 def handle_query(question: str):
     if not question.strip():
-        return "", ""
+        return "", "", ""
     result = ask(question)
     sources = "\n".join(
         f"• {SOURCE_LABELS.get(s, s)}" for s in result["sources"]
     )
-    return result["answer"], sources or "No sources retrieved."
+    chunk_parts = []
+    for i, c in enumerate(result.get("chunks", []), 1):
+        label = SOURCE_LABELS.get(c["source"], c["source"])
+        chunk_parts.append(
+            f"**Chunk {i} — {label}** (distance: {c['distance']:.4f})\n\n{c['text']}"
+        )
+    chunks_md = "\n\n---\n\n".join(chunk_parts) or "No chunks retrieved."
+    return result["answer"], sources or "No sources retrieved.", chunks_md
 
 
 with gr.Blocks(title="UCI Continuing Student Housing Unofficial Guide") as demo:
@@ -64,9 +71,11 @@ with gr.Blocks(title="UCI Continuing Student Housing Unofficial Guide") as demo:
                 lines=4,
                 interactive=False,
             )
+            with gr.Accordion("View retrieved chunks", open=False):
+                chunks_box = gr.Markdown()
 
-    submit_btn.click(handle_query, inputs=question, outputs=[answer_box, sources_box])
-    question.submit(handle_query, inputs=question, outputs=[answer_box, sources_box])
+    submit_btn.click(handle_query, inputs=question, outputs=[answer_box, sources_box, chunks_box])
+    question.submit(handle_query, inputs=question, outputs=[answer_box, sources_box, chunks_box])
     clear_btn.click(lambda: ("", "", ""), outputs=[question, answer_box, sources_box])
 
 demo.launch(theme=gr.themes.Soft())
